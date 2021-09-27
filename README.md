@@ -1,3 +1,6 @@
+# Begin 
+    apt-get update -y
+
 # Install
 ### Docker
     curl https://releases.rancher.com/install-docker/20.10.sh | sh
