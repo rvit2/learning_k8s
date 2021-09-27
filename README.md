@@ -1,6 +1,8 @@
 # Begin 
     apt-get update -y
     apt-get install git -y
+    git clone https://github.com/rvit2/learning_k8s.git
+    chmod 755 -R learning_k8s
 
 # Install
 ### Docker
