@@ -5,7 +5,10 @@
 
 # Install
 [docker](https://github.com/rvit2/learning_k8s/blob/main/scripts/install_docker.sh)  
-[kubectl](https://github.com/rvit2/learning_k8s/blob/main/scripts/install_kubectl.sh)
+    `./learning_k8s/scripts/install_docker.sh`    
+    
+[kubectl](https://github.com/rvit2/learning_k8s/blob/main/scripts/install_kubectl.sh)  
+    `./learning_k8s/scripts/install_kubectl.sh`
 
 # Build Rancher
     docker run -d --restart=unless-stopped \
