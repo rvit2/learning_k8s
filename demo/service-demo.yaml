@@ -11,3 +11,5 @@ spec:
     nodePort: 32281
     protocol: TCP
     targetPort: 8000
+  selector:
+    app: nginx    
