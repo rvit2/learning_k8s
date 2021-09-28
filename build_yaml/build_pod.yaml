@@ -1,0 +1,14 @@
+#pod-deploy.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-web
+  labels:
+    app: web
+spec:
+  containers:
+    - name: pod-web-container
+      image: vic070680/web
+      ports:
+        - containerPort: 8000
