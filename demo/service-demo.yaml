@@ -1,7 +1,7 @@
 apiVersion: v1
-kind: Pod
+kind: Service
 metadata:
-  name: pod-web
+  name: svc-web
   labels:
     app: nginx
 spec:
