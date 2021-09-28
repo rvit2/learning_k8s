@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: pod-web-container
-      image: rv88/web-8000
+      image: rv88/web-8000:v1
       ports:
         - containerPort: 8000
