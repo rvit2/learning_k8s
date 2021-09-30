@@ -13,7 +13,7 @@
 | rv88-Worker-1 | 34.81.43.186 |
 | rv88-Worker-2 | 35.201.153.138 |
 
-##### ssh rv88 ... [ssh key](https://github.com/rvit2/learning_k8s/blob/main/ssh/rv88.key)  
+##### ssh rv88 / [ssh key](https://github.com/rvit2/learning_k8s/blob/main/ssh/rv88.key)  
 
 ---
 
