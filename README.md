@@ -5,6 +5,9 @@
 ### Node IP
 | Title | IP |
 |---------|---------|
+| demo-Controller | 35.229.208.72 |
+| demo-Master | 35.229.135.20 |
+| demo-Worker | 34.80.77.82 | 
 | rv88-Controller | 35.229.140.114 |
 | rv88-Master | 104.199.254.182 |
 | rv88-Worker-1 | 34.81.43.186 |
