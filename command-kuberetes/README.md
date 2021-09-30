@@ -5,15 +5,18 @@
     kubectl get all -o wide
     
 #### Get Pods info
-    kubectl get pods
+    kubectl get pods -o wide
     kubectl get pods --show-labels
     kubectl get pods --selector="app=nginx"
 
 #### Get services info
-    kubectl get sevices
+    kubectl get sevices -o wide
     kubectl get sevices --show-labels
     kubectl get sevices --selector="app=nginx"
     
+#### Get ingress info
+    kubectl get ingress -o wide
+
 #### Get deployment info
     kubectl get deploy
     kubectl get deploy --show-labels
