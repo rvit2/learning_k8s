@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-web-deploy
+spec:
+  selector:
+    matchLabels:
+      app: blue-web
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: blue-web
+    spec:
+      containers:
+      - name: web1
+        image: "gcr.io/google-samples/hello-app:1.0"
+        env:
+        - name: "PORT"
+          value: "50000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blue-web-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: blue-web
+  ports:
+  - protocol: TCP
+    port: 60000
+    targetPort: 50000

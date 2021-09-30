@@ -1,0 +1,27 @@
+apiVersion: apps/v1 #指定使用API-V1版本
+kind: Deployment #指定類型為Deployment
+metadata: #定義資源
+  name: rolling-nginx-deployment #定義Deployment的名稱
+  annotations: #添加註解，方便部署
+        kubernetes.io/change-cause: UP-1234
+spec: #描述規格
+  selector: #標籤選擇器
+    matchLabels: #創建的Pod須符合的標籤
+      app: rolling-nginx #標籤名為rolling-nginx
+  replicas: 5 # tells deployment to run 5 pods matching the template
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2 #最多新增2個POD來更新，最多會有5+2個Pod
+      maxUnavailable: 0 #允許1個pod中斷
+  minReadySeconds: 5 #容器啟動5S後再更新
+  template: #配置POD
+    metadata: #定義資源
+      labels: #使用的標籤
+        app: rolling-nginx #使用rolling-標籤
+    spec: #描述規格
+      containers: #定義容器
+      - name: nginx #容器名為
+        image:  rv88/web-8000:v3 #使用的
+        ports: #設定POD的端口
+        - containerPort: 8000

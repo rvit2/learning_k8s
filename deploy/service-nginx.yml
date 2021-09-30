@@ -1,0 +1,13 @@
+apiVersion: v1 #指定使用API-V1版本
+kind: Service #指定類型為Service
+metadata: #定義資源
+   name: nginx-service #定義Service的名稱
+spec: #描述規格
+   selector: #標籤選擇器
+     app: nginx #標籤名為nginx
+   type: NodePort #指定類型為NodePort
+   ports:
+     - protocol: TCP
+       port: 8000 #ServicePort
+       targetPort: 8000 #containerPort
+       nodePort: 30678 #NodePort對外

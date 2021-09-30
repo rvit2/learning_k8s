@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: blue-green-ingress
+spec:
+  rules:
+  - host: blue.35.229.244.53.nip.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: blue-web-svc
+            port:
+              number: 60000
+  - host: green.35.229.244.53.nip.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: green-web-svc
+            port:
+              number: 80

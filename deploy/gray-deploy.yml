@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gray-web-deploy
+spec:
+  selector:
+    matchLabels:
+      app: gray-web
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: gray-web
+    spec:
+      containers:
+      - name: web1
+        image: "gcr.io/google-samples/hello-app:2.0"
+        env:
+        - name: "PORT"
+          value: "40000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gray-web-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: gray-web
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 40000
