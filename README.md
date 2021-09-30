@@ -2,7 +2,7 @@
 ### 下載課程資源至本機
     git clone https://github.com/rvit2/learning_k8s.git ; chmod 755 -R learning_k8s
 
-### Node IP (資源提供至10月底)
+### Node IP (資源提供至10月底 ,也可自行用 GCP 創建主機)
 | Title | IP |
 |---------|---------|
 | demo-Controller | 35.229.208.72 |
@@ -29,3 +29,8 @@
     -p 80:80 -p 443:443 \
     --privileged \
     rancher/rancher:latest
+
+---
+
+### Docker hub
+    https://hub.docker.com/repository/docker/rv88/web-8000
